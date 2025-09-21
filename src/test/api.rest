@@ -1,0 +1,5 @@
+### GET a la raíz
+GET http://localhost:8080/
+
+### GET al endpoint /test1
+GET http://localhost:8080/test1
