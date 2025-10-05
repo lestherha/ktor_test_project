@@ -1,9 +1,9 @@
 package com.KtorPractica
 
-import com.KtorPractica.DataBase.AllTables
-import com.KtorPractica.DataBase.DataBaseFactory
-import com.KtorPractica.DataBase.DataBaseInitializer
-import com.KtorPractica.DataBase.GenericMigration
+import com.KtorPractica.config.database.AllTables
+import com.KtorPractica.config.database.DataBaseFactory
+import com.KtorPractica.config.database.DataBaseInitializer
+import com.KtorPractica.config.database.GenericMigration
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {

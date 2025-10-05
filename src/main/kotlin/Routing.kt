@@ -1,6 +1,11 @@
 package com.KtorPractica
 
-import com.KtorPractica.Routers.userRouting
+import com.KtorPractica.repositories.GameRepositoryImpl
+import com.KtorPractica.repositories.UserRepositoryImpl
+import com.KtorPractica.repositories.UserGameRepositoryImpl
+import com.KtorPractica.routes.gameRoutes
+import com.KtorPractica.routes.userRoutes
+import com.KtorPractica.routes.userGameRoutes
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
@@ -8,13 +13,10 @@ import io.ktor.server.routing.*
 fun Application.configureRouting() {
     routing {
         get("/") {
-            call.respondText("Hlo mu122232ndo")
+            call.respondText("Hola mol2")
         }
-        get("/test1") {
-            val re = 4
-            val res = "Hola q tal tengo ${re+4}"
-            call.respondText(res)
-        }
-        userRouting()
+        userRoutes(UserRepositoryImpl())
+        gameRoutes(GameRepositoryImpl())
+        userGameRoutes(UserGameRepositoryImpl())
     }
 }
